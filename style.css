@@ -1,10 +1,29 @@
 
 
-.valikot {
-color: green;
-background-color: rgb(172, 172, 172);
+.navbar {
+  background-color: grey
 }
 
+
+text-align: center;
+}
+.btn-outline-success {
+  background-color: black;
+}
+
+.btn-outline-success:hover {
+
+  background-color: black;
+
+}
+.btn-outline-success:active {
+
+background-color: green;
+}
+
+.btn-outline-success:focus {
+background-color: black;
+}
 .centered {
     position: absolute;
     top: 50%;
@@ -16,3 +35,4 @@ background-color: rgb(172, 172, 172);
     text-align: center;
   color: silver;
   }
+  
