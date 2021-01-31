@@ -36,12 +36,17 @@ background-color: black;
   }
 
   footer {
-  
+    margin-top: auto;
     background-color: rgb(33,37,41);
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;  /* Height of the footer */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: center;
+    position:absolute;
+    
+   bottom:0;
+   width:100%;
+   height:60px;   /* Height of the footer */
   
     }
-    
