@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Truck Transportation</title>
-    
+   
 <style>
   body {
       background:url('Truck.jpg') no-repeat center center fixed;
@@ -74,7 +74,17 @@ background-color: #ddd; /* Button on click and on hover change colour */
   transition: max-height 0.2s ease-in-out;
 
 }           
-   
+panel {
+  border-radius: 5px;
+  background: rgb(33,37,41);
+  padding: 20px; 
+  width: auto;  
+  margin: 1%;
+  margin-top: 5em;
+  float: left;
+}  
+
+
 </style>
 
 </head>
@@ -93,62 +103,54 @@ background-color: #ddd; /* Button on click and on hover change colour */
       
               <div class="collapse navbar-collapse" id="navbarCollapse">
                   <div class="navbar-nav">
-                      <a href="index.html" class="nav-item nav-link active">Etusivu</a>
-                      <a href="palvelut.html" class="nav-item nav-link">Palvelut</a>
-                      <a href="yhteistiedot.html" class="nav-item nav-link">Yhteystiedot</a>
-                      <a href="faq.html" class="nav-item nav-link " tabindex="-1">FAQ</a>
+                    <a href="index.html" class="nav-item nav-link active">Etusivu</a>
+                    <a href="palvelut.html" class="nav-item nav-link">Palvelut</a>
+                    <a href="yhteistiedot.html" class="nav-item nav-link">Yhteystiedot</a>
+                    <a href="faq.html" class="nav-item nav-link " tabindex="-1">FAQ</a>
                   </div>
                   
               </div>
           </nav>
-      </div>    
-
-    <div class="kuva">
-    <img src="logo.jpg" height="200" width="350" alt="Truckers">
+      </div>
+<div class="container" style="margin-top: 5em;">
+    <div class="row">
+        <panel class="col-sm-5">
+            <h3>Yhteystiedot</h3>
+            <p> Puhelinnumero: 0700 123 4567</p>
+            <p> Sähköposti: otayhteyttä@firma.fi</p>
+            <p>Osoite:<br>
+                Yritys Oy 
+                Asiakaspalvelu 
+                PL 11
+                85501 Esimerkkikatu</p>
+                <img src="sijainti.png" class="rounded" alt="sijainti" width="100%">
+        </panel>
+       
+        <panel class="col-sm-5 rounded" >
+            <form>
+            <h2 style="margin-bottom: 1em;">Ota yhteyttä</h2>
+            <div >
+                <label class="form-label">Etu- ja Sukunimi</label>
+                <input class="form-control" name="fname" required>
+            </div>
+            <div>
+                <label class="form-label">Sähköposti</label>
+        <input class="form-control" type="email"  name="email">
+            </div>
+            <div >
+                <label class="form-label">Viesti</label>
+<textarea class="form-control" id="FormControlTextarea" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-secondary" style="margin-top: 5px;">Lähetä</button>
+          </form>  
+        
+    </div>
 </div>
 
-
-
-<button class="accordion">Yritys</button>
-<div class="accordion-content">
-<p>
-
-Päivittäiset ajoreittimme kattavat lähes koko Päijät-Hämeen alueen. Kuljetuspalvelumme toimii tarvittaessa myös muualle Suomeen.
-    
-Tyytyväinen asiakas on meille kunnia-asia!
-</p>
-</div>
-                 
-<button class="accordion">Asiakkaat</button>
-<div class="accordion-content">
-<p>
-Asiakkaitamme ovat niin pienet kuin keskisuuretyritykset. Ajamme myös kuluttajien tavara liikenettä.
-</p>
-</div>
-
-<button class="accordion">Työpaikat</button>
-<div class="accordion-content">
-  <p>
-Katso avoinna olevat työpaikat tai lähetä avoin hakemus!
-</p>
-</div>
-<script>
-    const cwb = document.querySelectorAll(".accordion");
-    cwb.forEach((accordion) => {
-    accordion.onclick = function () {
-    this.classList.toggle("open");
-    let content = this.nextElementSibling;
-    if (content.style.maxHeight) {
-    content.style.maxHeight = null;
-    } else {
-    content.style.maxHeight = content.scrollHeight + "px";
-    }
-    };
-    });
-    </script> 
 <footer>
     <p>Made by Group15</p>
 </footer>
+
 
 </body>
 
