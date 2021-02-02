@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <title>Truck Transportation</title>
+    <title>Kuljetusliike - Tilaa kuljetuspalvelu tai lähetys</title>
     
 <style>
   body {
@@ -38,8 +38,8 @@
    }
   
 .accordion:hover,.accordion:focus{ 
-outline: none; /* Button on click no outline */ 
-background-color: #ddd; /* Button on click and on hover change colour */
+outline: none; 
+background-color: #ddd; 
 }
  
 
@@ -47,7 +47,7 @@ background-color: #ddd; /* Button on click and on hover change colour */
 .accordion{
  width: 40%;
  color: white;
- background-color: rgb(66, 66, 66);
+ background-color: rgb(43, 43, 43);
  text-align: left;
  border: none;
  margin-left: 530px;
@@ -55,7 +55,7 @@ background-color: #ddd; /* Button on click and on hover change colour */
  padding: 15px 20px;
  font-size: 18px;
  cursor: pointer;
- transition: background-color 0.2s linear;
+ transition: ease-out;
  }
  .accordion:hover,.accordion:focus{
  outline:black;
@@ -86,10 +86,10 @@ footer {
     
    bottom:0;
    width:100%;
-   height:60px;   /* Height of the footer */
+   height:50px;   
   
     }
-
+ 
 </style>
 
 </head>
@@ -124,29 +124,38 @@ footer {
 
 
 
-<button class="accordion">Yritys</button>
+<button class="accordion"><center>Yritys</center></button>
 <div class="accordion-content">
 <p>
-
-Päivittäiset ajoreittimme kattavat lähes koko Päijät-Hämeen alueen. Kuljetuspalvelumme toimii tarvittaessa myös muualle Suomeen.
+Olemme toimineet jo vuodesta 2002.<br>
+Päivittäiset ajoreittimme kattavat lähes koko Etelä-Suomen. Kuljetuspalvelumme toimii tarvittaessa myös muualle Suomeen.
     
 Tyytyväinen asiakas on meille kunnia-asia!
+
+<img src="team.jpg" alt="lol" style="width: 600px; height: 300px; margin-top: 30px;"> 
 </p>
 </div>
                  
-<button class="accordion">Asiakkaat</button>
+<button class="accordion"><center>Asiakkaat</center></button>
 <div class="accordion-content">
 <p>
-Asiakkaitamme ovat niin pienet kuin keskisuuretyritykset. Ajamme myös kuluttajien tavara liikenettä.
+Asiakkaitamme ovat niin pienet kuin keskisuuretyritykset. <br>
+ Ajamme myös kuluttajien tavara liikenettä.
 </p>
 </div>
 
-<button class="accordion">Uramahdollisuudet</button>
+<button class="accordion"><center>Uramahdollisuudet</center></button>
 <div class="accordion-content">
-  <p>
+  <strong><p>
 Katso avoinna olevat työpaikat tai lähetä avoin hakemus!
-</p>
+  </p></strong>
+<img src="töis.jpg" alt="lol" style="width: 500px; height: 300px; margin-top: 20px;"> 
 </div>
+
+
+
+
+
 <script>
     const cwb = document.querySelectorAll(".accordion");
     cwb.forEach((accordion) => {
@@ -161,6 +170,7 @@ Katso avoinna olevat työpaikat tai lähetä avoin hakemus!
     };
     });
     </script> 
+    
 <footer>
     <p>Made by Group15</p>
 </footer>
