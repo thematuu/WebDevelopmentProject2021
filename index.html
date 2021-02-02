@@ -106,7 +106,7 @@ background-color: #ddd;
               </div>
           </nav>
       </div>    
-
+    </header>
     <div class="kuva">
     <img src="kuljetus.jpg" height="220" width="600" alt="Truckers">
 </div>
@@ -146,18 +146,25 @@ Katso avoinna olevat työpaikat tai lähetä avoin hakemus!
 
 
 <script>
-    const cwb = document.querySelectorAll(".accordion");
-    cwb.forEach((accordion) => {
-    accordion.onclick = function () {
-    this.classList.toggle("open");
-    let content = this.nextElementSibling;
-    if (content.style.maxHeight) {
-    content.style.maxHeight = null;
-    } else {
-    content.style.maxHeight = content.scrollHeight + "px";
+var acc = document.getElementsByClassName("accordion");
+
+for (let i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    for (let j = 0; j < acc.length; j++) {
+    acc[j].classList.remove("active");
+      if(j!=i){
+        acc[j].nextElementSibling.style.maxHeight = null;
+      }
     }
-    };
-    });
+    this.classList.add("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
     </script> 
     
 <footer>
