@@ -72,8 +72,42 @@ background-color: #ddd; /* Button on click and on hover change colour */
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-in-out;
+}
+.kirjautuminen {
+    width: 350px;
+    height: auto;
+    padding: 20px 30px;
+    background-color: rgb(197, 197, 197);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 #000;
+    margin: auto;
+    margin-top: 5%;
+}
+ul.list{
+    list-style-type: none;
+    text-align: center;
+}
+ul.list li{
+width: 250px;
+margin-bottom: 15px;
+}
 
-}           
+ul.list li input{
+    width: 250px;
+    text-align: center;
+    padding: 8px 0px;
+    border: none;
+    border-radius: 5px;
+    background-color: #d3d3d3;
+}    
+
+ul.list li input[type="button"]{
+    background-color: rgb(43, 43, 43);
+    color: white;
+}
+
+
+           
 footer {
     margin-top: auto;
     background-color: rgb(33,37,41);
@@ -121,17 +155,12 @@ footer {
       </div> 
     
 <div class="kirjautuminen">
-<label>
-    Käyttäjätunnus
-</label>
-<input type="text" placeholder="käyttäjätunnus">
-<br>
-<label>
-    Salasana
-</label>
-<input type="password" placeholder="salasana">
-<br>
-<button>Kirjaudu</button>
+    <ul class="list">
+    <li>Kirjaudu sisään</li>
+    <li><input type="text" name="Käyttäjätunnus" placeholder="Käyttäjätunnus"></li>
+    <li><input type="password" name="Salasana" placeholder="Salasana"></li>
+    <li><input type="button" name="Kirjaudu" value="Kirjaudu"></li>
+</ul>
 
 </div>
 
