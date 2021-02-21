@@ -13,7 +13,7 @@ else {
 $yhteys=mysqli_connect("shell.hamk.fi/pma", "trtkp20a3", "trtkp20a3passwd");
 $tietokanta=mysqli_select_db ($yhteys, "group15_arvostelut");
 
-$sql="select * from group15_arvostelut where tunnus=? and salasana=md5(?)";
+$sql="select * from group15_tunnukset where tunnus=? and salasana=md5(?)";
 $stmt=mysqli_prepare ($yhteys, $sql);
 mysqli_stmt_bind_param($stmt, "ss", $tunnus, $salasana);
 mysqli_execute ($stmt);
