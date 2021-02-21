@@ -101,7 +101,7 @@ ul.list li input{
     background-color: #d3d3d3;
 }    
 
-ul.list li input[type="button"]{
+ul.list li input[type="submit"]{
     background-color: rgb(43, 43, 43);
     color: white;
 }
@@ -157,9 +157,13 @@ footer {
 <div class="kirjautuminen">
     <ul class="list">
     <li>Kirjaudu sisään</li>
-    <li><input type="text" name="Käyttäjätunnus" placeholder="Käyttäjätunnus"></li>
-    <li><input type="password" name="Salasana" placeholder="Salasana"></li>
-    <li><input type="button" name="Kirjaudu" value="Kirjaudu"></li>
+    <form action='tarkistakirjautuminen.php' method='post'>
+    <li><input type="text" name="Käyttäjätunnus" value='' placeholder="Käyttäjätunnus"></li>
+    <li><input type="password" name="Salasana" value='' placeholder="Salasana"></li>
+    <li><input type="submit" name='ok' value="Kirjaudu"></li>
+    
+    </form>
+
 </ul>
 
 </div>
