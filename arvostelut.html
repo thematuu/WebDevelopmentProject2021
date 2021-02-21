@@ -7,8 +7,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $( function(){
+    $("#bt1").click(function() {
+        $.ajax({
+            url: 'haekommentit.php',
+            type: 'get',
+            success: function(data) {
+                $("#res").html(data);
+            },
+        });
+    });
+});
+    </script>
     <title>Kuljetusliike - Yhteystiedot</title>
     <meta name="description" content="Kuljetusliikkeen Yhteystiedot">
     <meta name="keywords" content="Kuljetusliike, tavarakuljetus, Yhteystiedot, Yhteydenotto, ota yhteyttä, Puhelinnumero, sähköposti, osoite">
@@ -73,21 +87,18 @@ panel {
         <button type="submit" class="btn btn-secondary" style="margin-top: 5px;">Lähetä</button>
       </form>  
       </panel>
-    <div class="row">
+    <div class="row" id=res>
         <panel class="col-sm-5">
-            <h3>Nimimerkki: Sami</h3>
-            <h3> Arvosana: ****</h3>
-            <p>Palvelu oli hyvää, mutta hinta kallis</p>
+         
+                <button id="bt1" class="btn btn-secondary">Lataa Arvostelut</button>
+           
        
         </panel>
        
-        <panel class="col-sm-5 rounded" >
-            <h3>Nimimerkki: Timo</h3>
-            <h3> Arvosana: *</h3>
-            <p>Huonopalvelu >:( </p>
-          </panel>
        
     </div>
+
+    
 </div>
 
 <footer>
