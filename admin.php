@@ -96,7 +96,17 @@ footer {
 
 
 
-<body>  
+<body>
+<?php
+session_start();
+
+if (!isset($_SESSION["user_ok"]) {
+    $_SESSION["paluuosoite"]="admin.php";
+    header("Location:login.php");
+    exit;
+}
+
+?>
     <header>
         <div class="valikot">
           <nav class="navbar navbar-expand-md navbar-dark bg-dark">
@@ -112,8 +122,6 @@ footer {
                       <a href="palvelut.html" class="nav-item nav-link">Palvelut</a>
                       <a href="yhteistiedot.html" class="nav-item nav-link">Yhteystiedot</a>
                       <a href="faq.html" class="nav-item nav-link " tabindex="-1">FAQ</a>
-                      <a href="admin.html" class="nav-item nav-link">Login</a> 
-                      <!-- Siirrä Login sivun oikealle puolelle / keksi järkevä nimi -->
                   </div>
                   
               </div>
